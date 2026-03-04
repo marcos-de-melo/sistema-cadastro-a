@@ -10,3 +10,4 @@ create table tbusuarios(
     senhaUsuario varchar(100),
     obsUsuario text
 );
+
