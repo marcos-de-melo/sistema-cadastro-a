@@ -15,6 +15,11 @@
         <label for="dataNasc">Data de Nascimento</label>
         <input type="date" name="dataNasc" id="dataNasc" required>
     </div>
+
+    <div>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" required>
+    </div>
     <div>
         <button type="submit">Cadastrar</button>
     </div>

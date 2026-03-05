@@ -11,3 +11,28 @@ create table tbusuarios(
     obsUsuario text
 );
 
+insert into tbusuarios (
+nomeUsuario,
+emailUsuario,
+dataNascUsuario,
+senhaUsuario,
+obsUsuario
+) values (
+'Marcos de Melo',
+'marcdmelo@gmail.com',
+'1976-10-25',
+'123',
+'blabla bla'
+),(
+'Juliana Melo',
+'juliana@gmail.com',
+'1985-08-20',
+'123',
+'blabla bla'
+),(
+'Nicoly Melo',
+'nicolymelo@gmail.com',
+'2006-09-15',
+'123',
+'blabla bla'
+);
