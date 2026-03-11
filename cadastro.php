@@ -21,7 +21,40 @@
         <input type="password" name="senha" id="senha" required>
     </div>
     <div>
+        <label for="obs">Observações</label>
+        <textarea name="obs" id="obs"></textarea>
+    </div>
+
+    <div>
         <button type="submit">Cadastrar</button>
     </div>
 
 </form>
+<?php
+$nome = $_POST['nome'] ?? '';
+$email = $_POST['email'] ?? '';
+$dataNasc = $_POST['dataNasc'] ?? '';
+$senha = $_POST['senha'] ?? '';
+$obs = $_POST['obs'] ?? '';
+
+if ($nome && $email && $dataNasc && $senha && $obs) {
+
+    $sql = "INSERT INTO tbusuarios 
+        (nomeUsuario, emailUsuario, dataNascUsuario, senhaUsuario, obsUsuario) 
+        VALUES ('$nome', '$email', '$dataNasc', '$senha', '$obs')";
+
+    $resultado = mysqli_query($conn, $sql);
+    if ($resultado) {
+        echo "<p>Dados inseridos no banco de dados com sucesso!</p>";
+    } else {
+        echo "<p>Erro ao inserir dados: " . mysqli_error($conn) . "</p>";
+    }
+
+
+} else {
+    echo "<p>Preencha todos os campos obrigatórios.</p>";
+}
+
+
+
+?>
