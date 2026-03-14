@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['acao']) && $_GET['acao'] == 'excluir') {
+    $idUsuario = $_GET['idUsuario'];
+    $sql = "DELETE FROM tbusuarios WHERE idUsuario = $idUsuario";
+    mysqli_query($conn, $sql);
+
+}
+
+?>
+
 <h2>Lista de Cadastro</h2>
 
 <table border="1">
@@ -7,6 +17,7 @@
             <th>Nome</th>
             <th>Email</th>
             <th>Data de Nascimento</th>
+            <th>Excluir</th>
 
         </tr>
     </thead>
@@ -23,7 +34,12 @@
                 <td><?php echo $linha['nomeUsuario']; ?></td>
                 <td><?php echo $linha['emailUsuario']; ?></td>
                 <td><?php echo $linha['dataNascUsuario']; ?></td>
-          
+                <td>
+                    <a href="index.php?menu=lista&acao=excluir&idUsuario=<?php echo $linha['idUsuario']; ?>">
+                        Excluir
+                    </a>
+                </td>
+
             </tr>
 
             <?php
