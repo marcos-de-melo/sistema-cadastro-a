@@ -26,7 +26,7 @@
     </div>
 
     <div>
-        <button type="submit">Cadastrar</button>
+        <button class="btn btn-primary btn-sm" type="submit">Cadastrar</button>
     </div>
 
 </form>
