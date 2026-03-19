@@ -1,6 +1,7 @@
-ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
+body {
+  background-image: url("../img/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
