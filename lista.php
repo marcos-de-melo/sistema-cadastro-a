@@ -18,6 +18,7 @@ if (isset($_GET['acao']) && $_GET['acao'] == 'excluir') {
             <th>Email</th>
             <th>Data de Nascimento</th>
             <th>Excluir</th>
+            <th>Editar</th>
 
         </tr>
     </thead>
@@ -38,6 +39,12 @@ if (isset($_GET['acao']) && $_GET['acao'] == 'excluir') {
                     <a class="btn btn-danger"
                         href="index.php?menu=lista&acao=excluir&idUsuario=<?php echo $linha['idUsuario']; ?>">
                         <i class="bi bi-trash-fill"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning"
+                        href="index.php?menu=editar-cadastro&idUsuario=<?php echo $linha['idUsuario']; ?>">
+                        <i class="bi bi-pencil-square"></i>
                     </a>
                 </td>
 

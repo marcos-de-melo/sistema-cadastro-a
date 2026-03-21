@@ -1,4 +1,4 @@
-<h2>Página de Cadastro</h2>
+<h2>Editar Cadastro</h2>
 
 <form class="bg-dark text-bg-dark p-3 rounded" action="index.php?menu=cadastro" method="post">
 
@@ -26,7 +26,7 @@
     </div>
 
     <div class="mb-3">
-        <button class="btn btn-primary btn-sm" type="submit">Cadastrar</button>
+        <button class="btn btn-primary btn-sm" type="submit">Atualizar</button>
     </div>
 
 </form>
