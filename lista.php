@@ -5,11 +5,21 @@ if (isset($_GET['acao']) && $_GET['acao'] == 'excluir') {
     mysqli_query($conn, $sql);
 
 }
-
+$pesquisa = $_POST['pesquisa'] ?? '';
 ?>
 
 <h2>Lista de Cadastro</h2>
+<div>
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <input class="form-control" type="search" name="pesquisa" id="pesquisa">
+            <button class="btn btn-info" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
 
+    </form>
+</div>
 <table class="table table-dark table-hover">
     <thead>
         <tr>
@@ -25,7 +35,8 @@ if (isset($_GET['acao']) && $_GET['acao'] == 'excluir') {
     <tbody>
         <?php
         $sql = "SELECT idUsuario, nomeUsuario, emailUsuario, 
-       date_format(dataNascUsuario, '%d/%m/%Y') dataNascUsuario FROM tbusuarios";
+       date_format(dataNascUsuario, '%d/%m/%Y') dataNascUsuario 
+       FROM tbusuarios where nomeUsuario like '%{$pesquisa}%'";
         $resultado = mysqli_query($conn, $sql);
 
         while ($linha = mysqli_fetch_assoc($resultado)) {
